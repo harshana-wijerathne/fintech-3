@@ -24,7 +24,7 @@ public class AppContextListener implements ServletContextListener {
     private static final Logger logger = Logger.getLogger(CustomerController.class.getName());
     @Override
     public void contextInitialized(ServletContextEvent sce) {
-        try(InputStream inputStream = getClass().getClassLoader().getResourceAsStream("db.properties")){
+        try(InputStream inputStream = getClass().getClassLoader().getResourceAsStream("h2.properties")){
             Properties PROPS = new Properties();
             PROPS.load(inputStream);
             HikariConfig config = new HikariConfig();

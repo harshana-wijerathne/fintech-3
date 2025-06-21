@@ -18,7 +18,7 @@ FROM tomcat:9.0.106-jdk17
 RUN rm -rf /usr/local/tomcat/webapps/*
 
 # Copy WAR from build stage
-COPY --from=build /app/target/fintech-1.0.0.war /usr/local/tomcat/webapps/ROOT.war
+COPY --from=build /app/target/fintech.war /usr/local/tomcat/webapps/ROOT.war
 
 # Expose port
 EXPOSE 8080
